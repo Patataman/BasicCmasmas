@@ -28,13 +28,12 @@ int factorial (int num) {
 						  la misma fuera de la función.
 */
 
-//En este caso, res es la variable donde se va a guardar el valor.
-int factorial2 (int num, int& res) {
-	if (num == 1){
-		return 1;
-	} else {
+//En este caso, res es la variable donde se va a guardar el valor
+//Como no se quiere que devuelva nada, se escribe void al comienzo
+void factorial2 (int num, int& res) {
+	if (num != 1){
 		res *= num;
-		return factorial2(num-1, res);
+		factorial2(num-1, res);
 	}
 }
 

@@ -39,7 +39,7 @@ int main () {
     }
     std::cout << '\n';
 	std::cout << "V2: ";
-	    for(int n : v2) {
+	for(int n : v2) {
         std::cout << n << ' ';
     }
     std::cout << '\n';

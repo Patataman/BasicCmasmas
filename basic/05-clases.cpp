@@ -7,10 +7,13 @@ class nombre {
 		//Variables
 		int num;
 
-		//Constructor
+		//Constructor - version 1
 		nombre(int num) {
 			nombre::num = num;
 		}
+		
+		//Constructor - version 2 (a partir de C11)
+		// nombre(int num) : num{num} {}
 		/*
 			Para acceder a las variables sería
 			<Clase>::<Nombre de variable>

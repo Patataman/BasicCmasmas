@@ -8,8 +8,14 @@
 #include <iostream>
 
 //Devolución de valores fijos.
-const char* funct1() {
+const std::string funct1() {
 	return "Ola k ase";
+}
+
+//Devolución de valores fijos (2)
+std::string const funct2() {
+	std::string ret = "PEPEP";
+	return ret;
 }
 
 //Paso de valores constantes.
@@ -27,7 +33,8 @@ void functNoConst2 (int &param) {
 int main () {
 
 	//funct1()[0] = 'b'; //Esto explota porque la cadena es const -> fija
-
+	std::cout << funct1() << "\n";
+	std::cout << funct2() << "\n";
 	int var = 5;
 	std::cout << "var: " << var << "\n";
 	functNoConst2(var);
